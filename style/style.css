@@ -1,0 +1,167 @@
+/*
+
+SUMÁRIO 
+
+    0. Configurações Gerais
+
+*/
+
+/* 0. Configurações Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root{
+    --ptn-white: #ffffff;
+    --ptn-black: #000000;
+    --ccl-blue: #010633;
+    --btn-blue: #00074a;
+    --ptn-red: #c40407;
+    --bg-blue: #b1b9fa;
+
+    --ssf-lato: 'Lato', 'Arial';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ----------------------- */
+
+/* 1. Body */
+body{
+    background-color: var(--bg-blue);
+}
+/* 1.1. Calculadora */
+.calculator-wrap-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+}
+.calculator-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+
+    width: max-content;
+
+    padding: 15px;
+
+    background-color: var(--ccl-blue);
+
+    border-radius: 10px;
+}
+.calculator-box-pad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.calculator-box-input{
+    margin-bottom: 15px;
+
+    padding: 2.5px;
+
+    width: 240px;
+    height: 50px;
+
+    font: normal bold 16px var(--ssf-lato);
+    color: var(--ptn-black);
+
+    background-color: none;
+
+    border: none;
+    border-radius: 5px;
+}
+.calculator-box-input-register{
+    width: 100%;
+    height: 30%;
+
+    font: normal normal 12.5px var(--ssf-lato);
+    color: rgba(255, 255, 255, 0.5);
+
+    text-align: right;
+
+    background-color: var(--ccl-blue);
+
+    border: none;
+    border-radius: 5px;
+}
+.calculator-box-input-display{
+    width: 100%;
+    height: 70%;
+
+    font: normal bold 30px var(--ssf-lato);
+    color: var(--ptn-white);
+
+    text-align: right;
+
+    background-color: var(--ccl-blue);
+
+    border: none;
+    border-radius: 5px;
+}
+.disabled{
+    pointer-events: none;
+
+    opacity: 0.5;
+}
+.calculator-box-pad-delete-btn{
+    margin-bottom: 10px;
+
+    padding: 5px;
+
+    width: 115px;
+
+    font: normal bold 16px var(--ssf-lato);
+    color: var(--ptn-white);
+
+    background-color: var(--ptn-red);
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+.calculator-box-pad-math{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.calculator-box-pad-math-btn{
+    margin: 4px;
+
+    height: 50px;
+    width: 50px;
+
+    font: normal bold 18px var(--ssf-lato);
+    color: var(--ptn-white);
+
+    background-color: var(--btn-blue);
+
+    border: none;
+    border-radius: 10px;
+
+    box-shadow: -2px -2px 2.5px rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+}
+.calculator-box-pad-math-btn:active{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow: none;
+}
+.two-columns-btn{
+    width: 110px;
+}
+.btn-operation-style{
+    background-color: rgb(0, 0, 24);
+}
+.btn-equal-style{
+    background-color: rgb(54, 54, 102);
+}
+/* ------- */

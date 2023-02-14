@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <main>
+        <div class="calculator-wrap-flex">
+            <div class="calculator-box">
+                <div class="calculator-box-input">
+                    <input type="text" class="calculator-box-input-register" id="register" readonly>
+                    <input type="text" class="calculator-box-input-display" id="display" readonly>
+                </div>
+                <div class="calculator-box-pad">
+                    <div class="calculator-box-pad-delete">
+                        <input type="button" class="calculator-box-pad-delete-btn" value="CE" onclick="displayClear()">
+                        <input type="button" class="calculator-box-pad-delete-btn" value="DL" onclick="displayDelete()">
+                    </div>
+                    <div class="calculator-box-pad-math">
+                        <div class="calculator-box-pad-math-row">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="X²" onclick="displayRegister('^ 2');buttonDeactivator();displayResultEsp(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="RQ" onclick="displayRegisterSR();buttonDeactivator();displayResultEsp(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="+/-" onclick="displayRegister('x (-1)');buttonDeactivator();displayResultEsp(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="/" onclick="displayRegister('/');buttonDeactivator()">
+                        </div>
+                        <div class="calculator-box-pad-math-row">
+                            <input type="button" class="calculator-box-pad-math-btn" value="7" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" value="8" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" value="9" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="X" onclick="displayRegister('x');buttonDeactivator()">
+                        </div>
+                        <div class="calculator-box-pad-math-row">
+                            <input type="button" class="calculator-box-pad-math-btn" value="4" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" value="5" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" value="6" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="-" onclick="displayRegister('-');buttonDeactivator()">
+                        </div>
+                        <div class="calculator-box-pad-math-row">
+                            <input type="button" class="calculator-box-pad-math-btn" value="1" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" value="2" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" value="3" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn btn-operation-style" value="+" onclick="displayRegister('+');buttonDeactivator();">
+                        </div>
+                        <div class="calculator-box-pad-math-row">
+                            <input type="button" class="calculator-box-pad-math-btn" id="point_button" value="." onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn" id="zero_button" value="0" onclick="displayValue(this.value)">
+                            <input type="button" class="calculator-box-pad-math-btn two-columns-btn btn-equal-style" value="=" onclick="displayResult()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./js/script.js"></script>
+</html>
